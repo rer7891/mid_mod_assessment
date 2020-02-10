@@ -1,4 +1,5 @@
 class CharacterService
+
   def get_members(house)
     response = conn.get("/v1/characters/?key=$2a$10$2qWJ47twXwT///yIYlqyROQic3oAp7pyzWm9QBsCCHEGebSkjNyGS&house=#{house}&orderOfThePhoenix=true")
     body = JSON.parse(response.body)
