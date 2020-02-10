@@ -1,1 +1,11 @@
-<h1> <%=search_result.count_house_members%><%=search_result.house_members.first.name%> Members </h1>
+
+<h1> <%= search_result.count_house_members%> Order Members </h1>
+
+    <% search_result.house_members.each do |member| %>
+<section class="order">
+      <p class="name"><%=member.name %></p>
+      <p class="role"><%=member.role if member.role != nil %></p>
+      <p class="house"><%=member.house %></p>
+      <p class="patronus"><%=member.patronus if member.patronus != nil %></p>
+</section>
+    <%end %>
