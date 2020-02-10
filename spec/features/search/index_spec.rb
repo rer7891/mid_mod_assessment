@@ -13,19 +13,10 @@ feature "user can search for the Gryffindor house" do
 
     expect(current_path).to eq(search_path)
 
-    expect(page).to have_content("21 Gryffindor Members")
-
-    expect(page).to have_css(".member", count: 21)
-
-    within(first(".member")) do
-      expect(page).to have_css(".name")
-      expect(page).to have_css(".role")
-      expect(page).to have_css(".house")
-      expect(page).to have_css(".patronus")
-    end
+    expect(page).to have_content("21 Order Members")
 
     expect(page).to have_css(".order", count: 21)
-    within(first(".member")) do
+    within(first(".order")) do
       expect(page).to have_css(".name")
       expect(page).to have_css(".role")
       expect(page).to have_css(".house")
