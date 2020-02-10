@@ -1,7 +1,7 @@
 class SearchController < ApplicationController
   def index
     render locals: {
-      search_result: HouseSearch.new(params[:house])
+      search_result: CharacterSearch.new(params[:house])
     }
   end
 end

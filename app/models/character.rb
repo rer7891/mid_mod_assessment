@@ -1,4 +1,4 @@
-class House
+class Character
   attr_reader :name, :house, :role, :patronus
   def initialize(data)
     @house = data["house"]
