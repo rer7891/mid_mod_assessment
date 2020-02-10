@@ -3,9 +3,9 @@
 
     <% search_result.order_members.each do |member| %>
 <section class="order">
-      <p class="name"><%=member.name %></p>
+      <p class="name"><b><%=member.name %></b></p>
       <p class="role"><%=member.role if member.role != nil %></p>
       <p class="house"><%=member.house %></p>
-      <p class="patronus"><%=member.patronus if member.patronus != nil %></p>
+      <p class="patronus"><%=member.patronus if member.patronus != nil %></p><br>
 </section>
     <%end %>
