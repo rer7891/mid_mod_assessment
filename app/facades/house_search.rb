@@ -9,7 +9,8 @@ class HouseSearch
   end
 
   def house_members(house)
-    @house_members ||= body.map do |data|
+    service = HouseService.new.members_by_house
+    @house_members ||= service.map do |data|
       House.new(data)
     end
   end
